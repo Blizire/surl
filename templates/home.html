@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta lang="en">
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'global.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'home.css') }}">
+		<title>SURL</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1 id="title"><a href="/">SURL</a></h1>
+				<div id="url_map">
+					<a href="/">Home</a>
+					<a href="/view/0">View</a>
+				</div>
+			</header>
+			<p id="description">SURL a local URL shortening service.</p>
+			<div id="form_wrapper">
+				<form action="/" method="POST">
+					<input type="text" placeholder="url..." name="url">
+					<input type="text" placeholder="route..." name="route">
+					<input type="submit">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

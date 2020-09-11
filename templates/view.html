@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta lang="en">
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'global.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'view.css') }}">
+		<title>SURL</title>
+	</head>
+	<body>
+		<div id="wrapper">
+            <header>
+                <h1 id="title"><a href="/">SURL</a></h1>
+                <div id="url_map">
+                    <a href="/">Home</a>
+                    <a href="/view/0">View</a>
+                </div>
+            </header>
+            <p id="description">SURL a local URL shortening service.</p>
+            <div id="control_panel">
+
+            </div>
+			<div id="current_map">
+				{% for record in records %}
+				<div id="route_map_object">
+					<a class="records" href="{{ record[1] }}">{{ record[1] }}</a>
+					<a class="routes" href="{{ '/route/' + record[2] }}">{{ record[2] }}</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:arial;
+}
+
+body{
+    background-color:#2D46B9;
+}
+
+#wrapper{
+    width:100%;
+}
+
+header{
+    color:white;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    width:100%;
+    background-color:black;
+    padding:25px 5px;
+    border-bottom:solid 3px black;
+}
+
+#description{
+    background-color:black;
+    color:white;
+    font-weight:600;
+    padding-bottom:15px;
+    padding-left:20%;
+    width:100%;
+}
+
+#url_map{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    height:100%;
+    width:15%;
+}
+
+a:link{
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+}
+
+a:visited{
+    color:white;
+    text-decoration:none;
+}
+
+a:hover{
+    color: #30b83d;
+}
