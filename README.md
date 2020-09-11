@@ -19,3 +19,32 @@ The script tools/randgen.py is used to generate submissions into the database fo
 
 ./unit_test.py currently only tests DB creation and validation of data
 submitted and pulled. 
+
+# Installation
+
+dependacies :
+
+git
+
+venv (python package)
+    
+    git clone https://github.com/Blizire/surl.git
+    
+    cd surl
+    
+    py -m venv venv
+    
+    ./venv/Scripts/activate.ps1
+    
+    pip install -r requirements.txt
+    
+    py ./__main__.py
+    
+this should be the required steps to run and setup the project to get the webapp running
+
+
+    
+    
+
+
+ 
