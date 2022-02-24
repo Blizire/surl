@@ -32,3 +32,17 @@
     padding:5px;
 }
 
+#control_panel{
+    display:flex;
+    justify-content: space-around;
+    margin:20px 100px;
+}
+
+#control_panel button{
+    color:white;
+    background-color: black;
+    border-radius: 4px;
+    width:120px;
+    height:60px;
+}
+

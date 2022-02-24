@@ -61,7 +61,11 @@ def home():
 @app.route("/view/<int:page>", methods=["GET"])
 def view(page="0"):
     records = pull_page_records(page)
-    return render_template("view.html", records=records)
+    next = int(page) + 1
+    if next < 0:
+        next = 0
+    back = int(page) - 1
+    return render_template("view.html", records=records, next=next, back=back)
 
 
 @app.route("/route/<text>")
