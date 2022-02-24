@@ -5,7 +5,7 @@ a local service you can use for making shortened URLS or custom redirects.
 
 - [x] submit urls to shorten and redirect too
 - [x] view shortened urls from /view
-- [ ] add page navigation to /view
+- [x] add page navigation to /view
 - [ ] functionality right click to delete or modify
 - [ ] popup message of shortned link user submits
 - [ ] sanitize urls to make sure its FQDN
