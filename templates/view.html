@@ -24,12 +24,17 @@
             </div>
 			<div id="current_map">
 				{% for record in records %}
-				<div id="route_map_object">
-					<a class="records" href="{{ record[1] }}">{{ record[1] }}</a>
-					<a class="routes" href="{{ '/route/' + record[2] }}">{{ record[2] }}</a>
+				<div class="route_map_object">
+					<a origin="{{ record[1] }}" class="routes" href="{{ '/route/' + record[2] }}">{{ record[2] }}</a>
+					<div id="rclick_menu">
+						<button id="copy_button">copy</button>
+						<button id="delete_button">delete</button>
+						<button id="edit_button">edit</button>
+					</div>
 				</div>
 				{% endfor %}
 			</div>
 		</div>
+		<script src="{{ url_for('static', filename='view.js') }}"></script>
 	</body>
 </html>
