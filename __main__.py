@@ -62,6 +62,7 @@ def home():
 def view(page="0"):
     records = pull_page_records(page)
     next = int(page) + 1
+    # bug here ( stil goes to -1 sometimes )
     if next < 0:
         next = 0
     back = int(page) - 1
