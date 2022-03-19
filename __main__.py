@@ -62,12 +62,16 @@ def home():
 def view(page="0"):
     records = pull_page_records(page)
     next = int(page) + 1
-    # bug here ( stil goes to -1 sometimes )
-    if next < 0:
-        next = 0
     back = int(page) - 1
+    if back <= 0:
+        back = 0
     return render_template("view.html", records=records, next=next, back=back)
 
+@app.route("/remove/<int:id>", methods=["POST"])
+def remove(id):
+    db = UrlTables("urltables.db")
+    db.remove_record(id)
+    return redirect("/")
 
 @app.route("/route/<text>")
 def route(text=None):

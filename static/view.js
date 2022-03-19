@@ -36,6 +36,6 @@ function remove(domObject) {
     };
     console.log("sending delete request");
     console.log(node)
-    xhttp.open("POST", "/remove/route/" + node.attributes["dbid"].nodeValue, true);
+    xhttp.open("POST", "/remove/" + node.attributes["dbid"].nodeValue, true);
     xhttp.send();
 }

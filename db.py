@@ -42,6 +42,10 @@ class UrlTables:
 								VALUES (?,?)""", (dest, route))
 		self.conn.commit()
 
+	def remove_record(self, id):
+		self.cursor.execute("""DELETE FROM urlmap WHERE ID = (?)""", (id,))		
+		self.conn.commit()
+
 	# only obtain records by route since they are the only value that should be unique
 	def get_record(self, route):
 		self.cursor.execute("""SELECT * FROM urlmap WHERE route=?""", (route, ))
